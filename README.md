@@ -1,7 +1,7 @@
 # Case-PHP-MySQL
 
-I det här caset ska du skapa en applikation som presenterar verksamheter (företag, föreningar, organisationer) utifrån olika kategorier.
-Det ska vara en fullstack applikation, och därmed använda PHP, MySQL, HTML, CSS och JavaScript. 
+I det här caset ska du skapa en fullstack applikation som presenterar verksamheter (företag, föreningar, organisationer) utifrån olika kategorier.
+Språken du ska använda är PHP, SQL, HTML, CSS och JavaScript. 
 
 Vi vill att du strävar efter följande namngivningsprinciper:
 
@@ -16,7 +16,6 @@ Frontend HTML, CSS, JavaScript
 Fler goda principer:
 - använd förklarande namn 
 - skriv kommentarer i din kod
-- sträva efter att vara konsekvent
 - skriv kod med indrag (indentation)
 
 
@@ -34,11 +33,11 @@ Lägg till
 ***
 
 ## Krav
-Applikationen ska kunna laddas ner / klonas från ditt Git repo. Repot ska hantera applikationen i Docker. Det ska finnas funktionalitet för att enkelt komma igång att använda projektet.
+Applikationen ska kunna laddas ner / klonas från ditt Git repo. Repot ska hantera applikationen i Docker. Det ska finnas funktionalitet för att enkelt komma igång att använda det projekt som  du utvecklar.
 
-Ditt repo ska ha en README.md som steg-för-steg beskriver hur man kommer igång med applikationen, och använder applikationen.
+Ditt repo ska ha en README.md som steg-för-steg beskriver hur man kommer igång med applikationen, och hur man använder applikationen.
 
-### Databas krav
+### Databas
 
 Följande tabeller ska finnas:
 
@@ -62,17 +61,17 @@ tabell `business`, med föjande kolumner:
 - category_id (INT FOREIGN KEY table category)
 
 
-## Design minimum
+### Design minimum
 - Low fidelity designskiss
 - Mobile first
 - Vyer för mobil och skärm
 
   
-## Design Extra
+### Design Extra
 - Logotyp
 - Färgtema
 
-## Code minimum
+### Code minimum
 - En README.md i gitrepot med följande delar:
   - Installation: Vad behövs för att man själv ska kunna köra appen?
   - Screenshots: minst en screenshot (eller gif) som visar appen under använding
@@ -83,12 +82,16 @@ tabell `business`, med föjande kolumner:
 - Alla verksamheter ska finnas listade den som besöker applikationen
 - Alla formulärsfält som registeras till databasen ska valideras (att rätt och rimlig typ att data lagras)
 
-## Code Extra
-- Publicerad via Linode eller motsvarade
+## Utmaningar
+
+Här finns exempel på utmaningar som du kan anta, Vi uppmuntrar dig till att anta utmaningar så att projketet kan bli en del av en kommande portfolio.
+
+- Publicera applikationen via Linode eller motsvarade
 - Det ska vara möjligt att sätta en verskamhet som draft (ej publicerad - visas endast för användare som skapat resursen)
 - Det ska vara möligt att sätta betyg (1-5 stjärnor) på verksamheter
 - Det ska vara möjligt att lägga till en kommenter för en verksamhet
 - Det ska vara möjligt att lägga till och redigera kategorier via formulär
+- Använd Frontend (JavaScript) för att kommunicera med backend
 - 
 ***
 

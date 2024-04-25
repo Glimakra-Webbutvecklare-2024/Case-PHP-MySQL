@@ -60,7 +60,6 @@ tabell `business`, med föjande kolumner:
 - user_id (INT FOREIGN KEY table user)
 - category_id (INT FOREIGN KEY table category)
 
-
 ### Design minimum
 - Low fidelity designskiss
 - Mobile first
@@ -87,12 +86,15 @@ tabell `business`, med föjande kolumner:
 Här finns exempel på utmaningar som du kan anta, Vi uppmuntrar dig till att anta utmaningar så att projketet kan bli en del av en kommande portfolio.
 
 - Publicera applikationen via Linode eller motsvarade
+- Skapa fler fält, tabeller
+- Ladda upp bilder i applikationen så att du dynamiskt kan ange url till en bild
 - Det ska vara möjligt att sätta en verskamhet som draft (ej publicerad - visas endast för användare som skapat resursen)
 - Det ska vara möligt att sätta betyg (1-5 stjärnor) på verksamheter
 - Det ska vara möjligt att lägga till en kommenter för en verksamhet
 - Det ska vara möjligt att lägga till och redigera kategorier via formulär
+- Använd PHP klasser för att omsätta resurser till modeller
 - Använd Frontend (JavaScript) för att kommunicera med backend
-- 
+- ...
 ***
 
 ### Redovisning - applikation under utveckling 

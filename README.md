@@ -1,17 +1,17 @@
 # Case-PHP-MySQL
 
 I det här caset ska du skapa en applikation som presenterar verksamheter (företag, föreningar, organisationer) utifrån olika kategorier.
-Det ska skapa en fullstack applikation, och därmed använda PHP, MySQL, HTML, CSS och JavaScript. 
+Det ska vara en fullstack applikation, och därmed använda PHP, MySQL, HTML, CSS och JavaScript. 
 
 Vi vill att du strävar efter följande namngivningsprinciper:
 
 Backend PHP
 - använd latinska tecken för variabelnamn och funktioner
-- använd namnstandard (PHP och MySQL snake_case)
+- följ namnstandard (PHP och MySQL snake_case)
   
 Frontend HTML, CSS, JavaScript
 - använd latinska tecken för variabelnamn och funktioner
-- använd namnstandard (JavaScript camelCase)
+- följ namnstandard (JavaScript camelCase)
 
 Fler goda principer:
 - använd förklarande namn 
@@ -23,19 +23,7 @@ Fler goda principer:
 ### Starta ditt arbete
 Skapa ett privat repo på GitHub och koppla det till din lokala utvecklingsmiljö (Visual Studio Code). 
 
----
-
-**TIPS** 
-
-Använd Anders docker projekt som en grund för caset (Ta bort learn mappen).
-
-eller
-
-Använd en mall som finns för caset - https://github.com/Glimakra-Webbutvecklare-2022/Template-Case-PHP
-
----
-
-Under projektet - senast 17 Maj bjuder du in dina lärare. Se Settings -> Manage access -> Add people
+Senast 2 maj bjuder du in dina lärare till ditt repo. Se Settings -> Manage access -> Add people
 
 Lägg till
 
@@ -46,13 +34,9 @@ Lägg till
 ***
 
 ## Krav
-Applikationen ska kunna laddas ner / klonas från ditt Git repo. Repot ska hantera applikationen i Docker. Det ska finnas instruktioner och funktionalitet för att enkelt komma igång att använda projektet.
+Applikationen ska kunna laddas ner / klonas från ditt Git repo. Repot ska hantera applikationen i Docker. Det ska finnas funktionalitet för att enkelt komma igång att använda projektet.
 
-Något i stil med:
-
-```sql
-CREATE TABLE `user` IF NOT EXISTS ...
-```
+Ditt repo ska ha en README.md som steg-för-steg beskriver hur man kommer igång med applikationen, och använder applikationen.
 
 ### Databas krav
 
@@ -109,19 +93,19 @@ tabell `business`, med föjande kolumner:
 ***
 
 ### Redovisning - applikation under utveckling 
-Tisdag 14 maj visar du upp ditt pågående arbete med case. Dela erfarenhetet, visa upp ngt från din applikation.
+Tisdag 14 maj visar du upp ditt pågående arbete med case. Dela erfarenhetet, visa upp utvalda delar från din applikation och ditt pågående projekt.
 
 
 ### Inlämning och redovisning
 Redovisning av caset är den måndagen den 27 maj kl 10.30 
 
-Vi önksar att alla får ta del av varandras redovisning. Det innebär att ni behöver förbereda er på att redovisningen är kort - ca 5 minuter per person. Då visar ni (demonstrerar) er applikation genom att dela skärm.
+Vi vill att alla får ta del av varandras redovisning. Det innebär att ni behöver förbereda er på att redovisningen är kort - ca 5 minuter per person. Då visar ni (demonstrerar) er applikation genom att dela skärm.
 
 *Förbered 5 minuters redovisning enligt följande mall:*
 
 #### I reovisningen ska du:
 - demonstrera applikationen
-- - visa hur man lägger till, markerar och tar bort resurser
+- - visa hur man lägger till, markerar och tar bort olika resurser
 - - visa exempel på annan funktionalitet (ex ngn av utmaningarna)
 - berätta vad du är mest nöjd med (design, kod, struktur...)
 - berätta vad du skulle vilja att applikationen kan göra, men inte hunnit att koda

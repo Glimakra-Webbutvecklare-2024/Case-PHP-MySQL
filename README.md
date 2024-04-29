@@ -61,9 +61,9 @@ tabell `business`, med föjande kolumner:
 - category_id (INT FOREIGN KEY table category)
 
 ### Design minimum
-- Low fidelity designskiss
+- Lo-Fi designskiss
 - Mobile first
-- Vyer för mobil och skärm
+- Hi-Fi för mobil och skärm
 
   
 ### Design Extra
@@ -94,7 +94,7 @@ Här finns exempel på utmaningar som du kan anta, Vi uppmuntrar dig till att an
 - Det ska vara möjligt att lägga till och redigera kategorier via formulär
 - Använd PHP klasser för att omsätta resurser till modeller
 - Använd Frontend (JavaScript) för att kommunicera med backend
-- ...
+- SCSS - med andvändade av mappstruktur 7-1 (abstracts, base etc.)
 ***
 
 ### Redovisning - applikation under utveckling 

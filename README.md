@@ -1,123 +1,77 @@
-# Case-PHP-MySQL
+# Case – PHP + MySQL (CRUD‑applikation)
 
-I det här caset ska du skapa en fullstack applikation som presenterar verksamheter (företag, föreningar, organisationer) utifrån olika kategorier.
-Språken du ska använda är PHP, SQL, HTML, CSS och JavaScript. 
+I det här caset bygger du en full‑stack‑applikation där inloggade användare kan skapa, läsa, uppdatera och ta bort (CRUD) en valfri typ av resurs. Vilken resurs det är bestämmer du själv – t.ex. en receptbok, kontaktbok, diktsamling, twitterklon, fotodagbok … välj något som känns roligt och rimligt att färdigställa inom tidsramen.
 
-Vi vill att du strävar efter följande namngivningsprinciper:
+Språken du ska använda är PHP, SQL, HTML, CSS och JavaScript.
 
-Backend PHP
-- använd latinska tecken för variabelnamn och funktioner
-- följ namnstandard (PHP och MySQL snake_case)
-  
-Frontend HTML, CSS, JavaScript
-- använd latinska tecken för variabelnamn och funktioner
-- följ namnstandard (JavaScript camelCase)
+## 1. Kod‑ & namngivningsprinciper
 
-Fler goda principer:
-- använd förklarande namn 
-- skriv kommentarer i din kod
-- skriv kod med indrag (indentation)
+- Backend / PHP: snake_case för variabler, funktioner och databasnamn
+- Frontend / HTML + CSS + JS:	camelCase för variabler & funktioner
+- Gemensamt: Välj beskrivande namn, Engelsk namngivning, Kommentera din kod och Använd konsekvent indrag
 
+## 2. Kom‑igång
+1.	Skapa ett privat GitHub‑repo och koppla till din lokala miljö (VS Code).
+2.	Bjud in lärarna senast 2 maj:
+   - addkolon (Mattias)
+   - andsju (Anders)
+   - frozenbanana (Henry)
 
-### Starta ditt arbete
-Skapa ett privat repo på GitHub och koppla det till din lokala utvecklingsmiljö (Visual Studio Code). 
+## 3. Krav
 
-Senast 2 maj bjuder du in dina lärare till ditt repo. Se Settings -> Manage access -> Add people
+### 3.1 Projekt‑setup
+1. Projektet ska kunna klonas och startas via Docker (t.ex. docker compose up).
+2. En README.md ska steg‑för‑steg beskriva:
+  3. Installation (krav, hur man startar containrar)
+  4. Användning (inloggning, skapa poster, etc.)
+  5. Minst en screenshot / gif av appen i drift
 
-Lägg till
+### 3.2 Databas‑schema (minimum)
 
-- addkolon (Mattias)
-- andsju (Anders)
-- frozenbanana (Henry)
+| Tabell        | Kolumner                                                                                           |
+|-------------- |----------------------------------------------------------------------------------------------------|
+| user          | id INT PK AI<br>username VARCHAR UNIQUE<br>password VARCHAR *(hashad)*                              |
+| *din_resurs*<br>ex. recipe, contact, poem | id INT PK AI<br>**minst tre egna fält** (t.ex. title, content, created_at)<br>user_id INT FK → user.id |
 
-***
+Tips: Om din idé behöver fler tabeller (t.ex. “ingredients” till ett recept) är det helt okej – se endast ovan som miniminivå.
 
-## Krav
-Applikationen ska kunna laddas ner / klonas från ditt Git repo. Repot ska hantera applikationen i Docker. Det ska finnas funktionalitet för att enkelt komma igång att använda det projekt som  du utvecklar.
+### 3.3 Funktionalitet (minimum)
 
-Ditt repo ska ha en README.md som steg-för-steg beskriver hur man kommer igång med applikationen, och hur man använder applikationen.
+| Roll        | Måste kunna                                                                                           |
+|-------------- |----------------------------------------------------------------------------------------------------|
+| Besökare          | Se lista över alla resurser (read‑only)                              |
+| Inloggad användare| Se samtliga resurser|
+| Inloggad användare| Skapa ny resurs|
+| Inloggad användare| Uppdatera endast egen resurs |
+| Inloggad användare| Ta bort endast egen resurs |
+| Applikationen | Hasha lösenord vid användarregistrering |
+| Applikationen | Validera all indata som skickas från användaren |
 
-### Databas
+## 4. Utmaningar
+  1.	Kommentarer – låta användare kommentera en resurs (t.ex. “Snygg dikt!”).
+  2.	Bilduppladdning – ladda upp bild kopplad till resursen och spara filnamn/url på ett säkert sätt (filtypcheck, unika filnamn, osv.).
+  3.	Publicera appen på t.ex. Hetzner.
+  4.	“Draft”‑status: möjliggör privata utkast synliga bara för ägaren.
+  5.	Betygsättningar (1‑5 stjärnor).
+  7.	Objekt‑orienterad PHP (klasser + modeller).
 
-Följande tabeller ska finnas:
+## 5. Design
+- Mobile first lo‑fi skisser.
+- Hi‑fi mockups för mobil & desktop.
+- Extra: logotyp och färgpalett om du vill.
 
-tabell `user`, med föjande kolumner:
-- id (INT, PRIMARY KEY AUTO_INCREMENT)
-- username (VARCHAR, UNIQUE)
-- password (VARCHAR, **hashed**)
+## 6. Tidsplan & redovisning
 
-tabell `category`, med föjande kolumner:
-- id (INT, PRIMARY KEY AUTO_INCREMENT)
-- category (VARCHAR)
+| Datum        | Vad händer                                                                                           |
+|-------------- |----------------------------------------------------------------------------------------------------|
+|2 maj|  GitHub‑repo delat med lärare|
+|14 maj|	halvtidsredovisning – visa ditt pågående arbete
+|27 maj| kl 10.30	Slutredovisning (ca 5 min per person, bokstavsordning efternamn)|
 
-tabell `business`, med föjande kolumner:
-- id (INT, PRIMARY KEY AUTO_INCREMENT)
-- name (VARCHAR)
-- address (VARCHAR)
-- open_hours (VARCHAR)
-- image_url (VARCHAR)
-- date_updated (DATETIME NOT NULL DEFAULT current_timestamp())
-- user_id (INT FOREIGN KEY table user)
-- category_id (INT FOREIGN KEY table category)
-
-### Design minimum
-- Lo-Fi designskiss
-- Mobile first
-- Hi-Fi för mobil och skärm
-
-  
-### Design Extra
-- Logotyp
-- Färgtema
-
-### Code minimum
-- En README.md i gitrepot med följande delar:
-  - Installation: Vad behövs för att man själv ska kunna köra appen?
-  - Screenshots: minst en screenshot (eller gif) som visar appen under använding
-- En användare ska kunna registrera ett konto
-- En användare ska kunna logga in och logga ut
-- Inloggad användare ska kunna lägga till verksamheter
-- Verksamheter ska kunna redigeras och raderas av den användare som skapat resursen
-- Alla verksamheter ska finnas listade den som besöker applikationen
-- Alla formulärsfält som registeras till databasen ska valideras (att rätt och rimlig typ att data lagras)
-
-## Utmaningar
-
-Här finns exempel på utmaningar som du kan anta, Vi uppmuntrar dig till att anta utmaningar så att projketet kan bli en del av en kommande portfolio.
-
-- Publicera applikationen via Linode eller motsvarade
-- Skapa fler fält, tabeller
-- Ladda upp bilder i applikationen så att du dynamiskt kan ange url till en bild
-- Det ska vara möjligt att sätta en verskamhet som draft (ej publicerad - visas endast för användare som skapat resursen)
-- Det ska vara möligt att sätta betyg (1-5 stjärnor) på verksamheter
-- Det ska vara möjligt att lägga till en kommenter för en verksamhet
-- Det ska vara möjligt att lägga till och redigera kategorier via formulär
-- Använd PHP klasser för att omsätta resurser till modeller
-- Använd Frontend (JavaScript) för att kommunicera med backend
-- SCSS - med andvändade av mappstruktur 7-1 (abstracts, base etc.)
-***
-
-### Redovisning - applikation under utveckling 
-Tisdag 14 maj visar du upp ditt pågående arbete med case. Dela erfarenhetet, visa upp utvalda delar från din applikation och ditt pågående projekt.
+Slutredovisningen ska innehålla
+	1.	Demo: logga in, skapa, uppdatera & ta bort en resurs (och ev. utmaning).
+	2.	Stolthet: det du är mest nöjd med (design, kod, struktur …).
+	3.	Next steps: vad du skulle vilja hinna bygga vidare på.
 
 
-### Inlämning och redovisning
-Redovisning av caset är den måndagen den 27 maj kl 10.30 
-
-Vi vill att alla får ta del av varandras redovisning. Det innebär att ni behöver förbereda er på att redovisningen är kort - ca 5 minuter per person. Då visar ni (demonstrerar) er applikation genom att dela skärm.
-
-*Förbered 5 minuters redovisning enligt följande mall:*
-
-#### I reovisningen ska du:
-- demonstrera applikationen
-- - visa hur man lägger till, markerar och tar bort olika resurser
-- - visa exempel på annan funktionalitet (ex ngn av utmaningarna)
-- berätta vad du är mest nöjd med (design, kod, struktur...)
-- berätta vad du skulle vilja att applikationen kan göra, men inte hunnit att koda
-
-Redovisningen sker i bokstavordning (efternamn a-ö)
-
-### Handledning
-Det kommer givetvis finnas möjlighet till handledning fram tills den 27 maj. I första hand är det under vanlig lektionstid.
-
-Lycka till!
+Lycka till och ha kul!

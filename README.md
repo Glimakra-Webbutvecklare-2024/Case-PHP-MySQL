@@ -68,10 +68,11 @@ Tips: Om din idé behöver fler tabeller (t.ex. “ingredients” till ett recep
 |14 maj|	halvtidsredovisning – visa ditt pågående arbete
 |27 maj| kl 10.30	Slutredovisning (ca 5 min per person, bokstavsordning efternamn)|
 
-Slutredovisningen ska innehålla
-	1.	Demo: logga in, skapa, uppdatera & ta bort en resurs (och ev. utmaning).
-	2.	Stolthet: det du är mest nöjd med (design, kod, struktur …).
-	3.	Next steps: vad du skulle vilja hinna bygga vidare på.
+Slutredovisningen ska innehålla:
+
+1. Demo: logga in, skapa, uppdatera & ta bort en resurs (och ev. utmaning).
+2. Stolthet: det du är mest nöjd med (design, kod, struktur …).
+3. Next steps: vad du skulle vilja hinna bygga vidare på.
 
 
 Lycka till och ha kul!

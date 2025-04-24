@@ -47,6 +47,9 @@ Tips: Om din idé behöver fler tabeller (t.ex. “ingredients” till ett recep
 | Applikationen | Hasha lösenord vid användarregistrering |
 | Applikationen | Validera all indata som skickas från användaren |
 
+### 3.4 GitHub commits
+Du ska ha gjort minst 10 commits över tid.  
+
 ## 4. Utmaningar
   1.	Kommentarer – låta användare kommentera en resurs (t.ex. “Snygg dikt!”).
   2.	Bilduppladdning – ladda upp bild kopplad till resursen och spara filnamn/url på ett säkert sätt (filtypcheck, unika filnamn, osv.).

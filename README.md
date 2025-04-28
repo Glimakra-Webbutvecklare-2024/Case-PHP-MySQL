@@ -68,7 +68,7 @@ Du ska ha gjort minst 10 commits över tid.
 | Datum        | Vad händer                                                                                           |
 |-------------- |----------------------------------------------------------------------------------------------------|
 |2 maj|  GitHub‑repo delat med lärare|
-|14 maj|	kl 10.25 halvtidsredovisning – visa ditt pågående arbete
+|14 maj|	kl 10.25 Halvtidsredovisning – visa ditt pågående arbete
 |22 maj| kl 10.25	Slutredovisning (ca 5 min per person, bokstavsordning efternamn)|
 
 Slutredovisningen ska innehålla:

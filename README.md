@@ -62,6 +62,7 @@ Du ska ha gjort minst 10 commits över tid.
 - Mobile first lo‑fi skisser.
 - Hi‑fi mockups för mobil & desktop.
 - Extra: logotyp och färgpalett om du vill.
+- Extra: Använd ramverket Bootstrap
 
 ## 6. Tidsplan & redovisning
 
